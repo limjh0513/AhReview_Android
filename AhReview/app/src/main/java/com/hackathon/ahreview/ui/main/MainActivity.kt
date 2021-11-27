@@ -14,6 +14,11 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     override val viewModel: MainViewModel by viewModel()
 
+    override fun onResume() {
+        super.onResume()
+        userInit()
+    }
+
     override fun observerViewModel() {
         userInit()
 

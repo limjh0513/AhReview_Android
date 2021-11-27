@@ -15,44 +15,54 @@
         android:layout_height="match_parent"
         tools:context=".ui.detailStore.DetailStoreActivity">
 
-        <ImageButton
-            android:id="@+id/storeD_back_btn"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_view"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
-            android:onClick="@{() -> vm.onClickBackBtn()}"
-            android:padding="20dp"
-            android:src="@drawable/ic_back_btn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-        <TextView
-            android:id="@+id/tv_storeDetailName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/poppins_extrabold"
-            android:text="둘리 마트"
-            android:textColor="@color/black"
-            android:textSize="@dimen/little_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/title_line"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/storeD_back_btn" />
+            <ImageButton
+                android:id="@+id/storeD_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:onClick="@{() -> vm.onClickBackBtn()}"
+                android:padding="20dp"
+                android:src="@drawable/ic_back_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/tv_storeDetailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/poppins_extrabold"
+                android:text="둘리 마트"
+                android:textColor="@color/black"
+                android:textSize="@dimen/little_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/title_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/storeD_back_btn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -65,7 +75,7 @@
             android:elevation="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view">
+            app:layout_constraintTop_toBottomOf="@+id/header_view">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
@@ -199,9 +209,9 @@
                 android:background="@drawable/activation_button_background"
                 android:elevation="4dp"
                 android:fontFamily="@font/poppins_semibold"
+                android:onClick="@{() -> vm.onClickRecentBtn()}"
                 android:text="최신순"
                 android:textColor="@color/white"
-                android:onClick="@{() -> vm.onClickRecentBtn()}"
                 android:textSize="@dimen/cp_text" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -212,8 +222,8 @@
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/disabled_button_background"
                 android:elevation="16dp"
-                android:onClick="@{() -> vm.onClickPositiveBtn()}"
                 android:fontFamily="@font/poppins_semibold"
+                android:onClick="@{() -> vm.onClickPositiveBtn()}"
                 android:text="긍정"
                 android:textColor="@color/black"
                 android:textSize="@dimen/cp_text" />
@@ -224,8 +234,8 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/disabled_button_background"
                 android:elevation="16dp"
-                android:onClick="@{() -> vm.onClickNegativeBtn()}"
                 android:fontFamily="@font/poppins_semibold"
+                android:onClick="@{() -> vm.onClickNegativeBtn()}"
                 android:text="부정"
                 android:textColor="@color/black"
                 android:textSize="@dimen/cp_text" />

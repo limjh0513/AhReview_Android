@@ -1,8 +1,6 @@
 package com.hackathon.ahreview.ui.detailStore
 
 import android.content.Intent
-import android.content.res.Resources
-import androidx.appcompat.widget.ThemeUtils
 import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.hackathon.ahreview.R

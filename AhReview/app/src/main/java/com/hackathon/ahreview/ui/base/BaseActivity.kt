@@ -8,7 +8,6 @@ import androidx.databinding.ViewDataBinding
 import com.hackathon.ahreview.BR
 import com.hackathon.ahreview.R
 import com.nhn.android.naverlogin.OAuthLogin
-import java.io.File
 import java.lang.reflect.ParameterizedType
 import java.util.*
 

@@ -1,7 +1,5 @@
 package com.hackathon.ahreview.data.model.request
 
-import java.io.File
-
 data class ReviewRequest(
     val address: String,
     val anonymous: Boolean,

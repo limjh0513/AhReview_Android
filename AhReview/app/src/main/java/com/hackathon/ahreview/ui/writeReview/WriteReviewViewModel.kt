@@ -2,6 +2,7 @@ package com.hackathon.ahreview.ui.writeReview
 
 import android.view.View
 import androidx.lifecycle.MutableLiveData
+import com.hackathon.ahreview.data.model.request.ReviewRequest
 import com.hackathon.ahreview.data.model.response.SentimentResponse
 import com.hackathon.ahreview.data.repository.ClovaRepository
 import com.hackathon.ahreview.data.repository.ReviewRepository
@@ -18,13 +19,16 @@ class WriteReviewViewModel(
     val onMicClicked = SingleLiveEvent<Unit>()
     val onReviewed = SingleLiveEvent<Unit>()
 
-    val anonymous = MutableLiveData<Boolean>(false)
-    val review = MutableLiveData<String>("")
-    val ratingStar = MutableLiveData<Float>(0.0F)
-    val imageUrl = MutableLiveData<String>("")
+    val anonymous = MutableLiveData(false)
+    val review = MutableLiveData("")
+    val ratingStar = MutableLiveData(0.0F)
+    val imageUrl = MutableLiveData("")
 
     val sentimentSuccess = MutableLiveData<SentimentResponse>()
     val sentimentError = MutableLiveData<Throwable>()
+
+    val writeReviewSuccess = MutableLiveData<Any>()
+    val writeReviewError = MutableLiveData<Throwable>()
 
     fun getSentiment(id: String, key: String, type: String, review: String) {
         addDisposable(clovaRepository.checkSentiment(id, key, type, review), object: DisposableSingleObserver<SentimentResponse>(){
@@ -36,6 +40,19 @@ class WriteReviewViewModel(
                 sentimentError.value = e
                 e.printStackTrace()
             }
+        })
+    }
+
+    fun writeReview(token: String, request: ReviewRequest){
+        addDisposable(reviewRepository.postReview(token, request), object : DisposableSingleObserver<Any>(){
+            override fun onSuccess(t: Any) {
+                writeReviewSuccess.value = t
+            }
+
+            override fun onError(e: Throwable) {
+                writeReviewError.value = e
+            }
+
         })
     }
 

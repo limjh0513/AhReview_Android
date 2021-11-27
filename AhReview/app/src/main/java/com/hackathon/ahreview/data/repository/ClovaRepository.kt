@@ -6,7 +6,7 @@ import com.hackathon.ahreview.data.model.response.SentimentResponse
 import io.reactivex.Single
 import org.json.JSONObject
 
-class ClovaRepository {
+class ClovaRepository() {
     fun checkSentiment(id: String, key: String, type: String, content: String): Single<SentimentResponse> {
         val request = SentimentRequest(content)
         return ClovaServer.clovaRetrofit.checkSentiment(id, key, type, request).map{

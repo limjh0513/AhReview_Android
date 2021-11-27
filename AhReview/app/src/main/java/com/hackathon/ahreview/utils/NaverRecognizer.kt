@@ -3,18 +3,11 @@ package com.hackathon.ahreview.utils
 import android.content.Context
 import android.os.Handler
 import android.os.Message
-
 import android.util.Log
 import androidx.annotation.WorkerThread
 import com.hackathon.ahreview.R
 import com.naver.speech.clientapi.*
 import com.naver.speech.clientapi.SpeechConfig.EndPointDetectType
-
-import com.naver.speech.clientapi.SpeechConfig;
-import com.naver.speech.clientapi.SpeechRecognitionException;
-import com.naver.speech.clientapi.SpeechRecognitionListener;
-import com.naver.speech.clientapi.SpeechRecognitionResult;
-import com.naver.speech.clientapi.SpeechRecognizer;
 import com.naver.speech.clientapi.SpeechConfig.LanguageType
 
 class NaverRecognizer(context: Context?, handler: Handler, clientId: String?) : SpeechRecognitionListener {

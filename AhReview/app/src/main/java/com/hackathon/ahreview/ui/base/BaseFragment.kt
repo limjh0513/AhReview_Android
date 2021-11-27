@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.hackathon.ahreview.R
 import com.hackathon.ahreview.BR
+import com.hackathon.ahreview.R
 import java.lang.reflect.ParameterizedType
 import java.util.*
 

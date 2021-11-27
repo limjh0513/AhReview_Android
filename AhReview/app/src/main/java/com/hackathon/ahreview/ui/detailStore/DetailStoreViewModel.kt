@@ -2,7 +2,6 @@ package com.hackathon.ahreview.ui.detailStore
 
 import android.view.View
 import androidx.lifecycle.MutableLiveData
-import com.hackathon.ahreview.data.model.request.GetReviewRequest
 import com.hackathon.ahreview.data.model.response.StoreReview
 import com.hackathon.ahreview.data.repository.ReviewRepository
 import com.hackathon.ahreview.ui.base.BaseViewModel

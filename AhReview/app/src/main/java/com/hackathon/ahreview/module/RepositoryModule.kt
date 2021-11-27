@@ -1,12 +1,13 @@
 package com.hackathon.ahreview.module
 
-import com.hackathon.ahreview.data.repository.ClovaRepository
-import com.hackathon.ahreview.data.repository.ReviewRepository
-import com.hackathon.ahreview.data.repository.ServerRepository
+import com.hackathon.ahreview.data.repository.*
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 val RepositoryModule = module {
-    single<ClovaRepository> { ClovaRepository() }
-    single<ServerRepository> { ServerRepository() }
-    single<ReviewRepository> { ReviewRepository() }
+    single { ClovaRepository() }
+    single { AuthRepository(get()) }
+    single { ReviewRepository(get()) }
+    single { StoreRepository(get()) }
+    single { UserRepository(get()) }
 }

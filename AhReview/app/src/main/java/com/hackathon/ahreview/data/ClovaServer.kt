@@ -1,6 +1,6 @@
 package com.hackathon.ahreview.data
 
-import com.hackathon.ahreview.data.service.ClovaApi
+import com.hackathon.ahreview.data.service.ClovaService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -18,5 +18,5 @@ object ClovaServer {
         .client(okHttpClient)
         .baseUrl("https://naveropenapi.apigw.ntruss.com/")
         .build()
-        .create(ClovaApi::class.java)
+        .create(ClovaService::class.java)
 }

@@ -3,14 +3,15 @@ package com.hackathon.ahreview.utils
 import android.media.MediaPlayer
 import android.os.Build
 import android.os.Environment
-import android.os.FileUtils
 import android.os.StrictMode
 import androidx.annotation.RequiresApi
-import java.io.*
+import java.io.BufferedReader
+import java.io.DataOutputStream
+import java.io.File
+import java.io.FileOutputStream
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
-import java.nio.file.Paths
 
 
 class NaverAPITTS {

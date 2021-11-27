@@ -1,7 +1,5 @@
 package com.hackathon.ahreview.ui.base
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import io.reactivex.Completable
 import io.reactivex.Single
