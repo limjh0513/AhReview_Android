@@ -12,6 +12,7 @@ import com.hackathon.ahreview.data.model.response.Store
 import com.hackathon.ahreview.databinding.StoreItemBinding
 import com.hackathon.ahreview.ui.detailStore.DetailStoreActivity
 
+// FIXME: 아까 detail이랑 거의 비슷하자나, 이게 레거시야, 공통된 부분을 묶고 하나로 Adapter를 사용해
 class StoreListAdapter : RecyclerView.Adapter<StoreListAdapter.ViewHolder>() {
     lateinit var binding: StoreItemBinding
     lateinit var items: List<Store>

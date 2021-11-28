@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import java.util.concurrent.atomic.AtomicBoolean
 
+// TODO: SingleLiveEvent를 왜 사용하는지 EventWrapper랑은 뭐가 다른지 알아보고 공부해야 함, 상황에 맞게 사용해야 함
 class SingleLiveEvent<T> : MutableLiveData<T>() {
 
     private val mPending = AtomicBoolean(false)
