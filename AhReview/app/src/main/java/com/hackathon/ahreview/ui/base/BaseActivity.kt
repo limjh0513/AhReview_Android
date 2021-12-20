@@ -11,6 +11,12 @@ import com.nhn.android.naverlogin.OAuthLogin
 import java.lang.reflect.ParameterizedType
 import java.util.*
 
+
+// FIXME: 현재 Base는 도담도담 레거시꺼를 계속 사용하는데 이를 이제는 그만 사용하고 직접 다시 만들어봐라
+// FIXME: Base를 왜 사용하는지, 이때 제네릭은 왜 필요한지, Java Style말고 Kotlin 스타일로 코드를 작성해라
+// FIXME: Base를 직접만들어보면 코드 공통화 부분에 대해서 많이 배우게 될거다
+// FIXME: 코드 복붙 하는 개발자가 되지 말고 직접 설계하고 구현하는 개발자가 되라
+
 abstract class BaseActivity<VB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity() {
     protected lateinit var mBinding: VB
     protected lateinit var mViewModel: VM

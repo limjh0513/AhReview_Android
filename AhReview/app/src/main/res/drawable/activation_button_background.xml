@@ -1,3 +1,6 @@
+<!-- background 속성으로 사용되기 때문에 파일명 역시 background_로 시작하는 것이 좋다 -->
+<!-- 통일성을 갖춰야지 된다, 아이콘은 ic_, 이미지는 img_ 이렇게 프로젝트 시작 전 컨벤션을 맞추고 시작해라-->
+<!-- font 역시 font_ 형식으로 똑같이 구성하는게 좋다, 다른 drawable 파일 역시 동일해서 다른 곳에서는 설명 생략할게-->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="10dp"
     android:shape="rectangle">
