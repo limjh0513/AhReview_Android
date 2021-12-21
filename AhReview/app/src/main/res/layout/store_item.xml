@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@drawable/review_background"
+        android:background="@drawable/background_review"
         android:elevation="4dp">
 
         <androidx.cardview.widget.CardView
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
-                android:fontFamily="@font/poppins_extrabold"
+                android:fontFamily="@font/pont_poppins_extrabold"
                 android:gravity="left"
                 android:textColor="@color/black"
                 android:textSize="@dimen/content"
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:fontFamily="@font/poppins_medium"
+                android:fontFamily="@font/pont_poppins_medium"
                 android:textColor="@color/review_count"
                 android:textSize="@dimen/cp_text"
                 android:text="리뷰 40개" />
@@ -92,7 +92,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="4dp"
                 android:layout_weight="1"
-                android:fontFamily="@font/poppins_semibold"
+                android:fontFamily="@font/pont_poppins_semibold"
                 android:text="4.0"
                 android:textColor="@color/black"
                 android:textSize="@dimen/cp_text" />
@@ -113,7 +113,7 @@
                 android:layout_height="16dp"
                 android:layout_gravity="center"
                 android:layout_marginEnd="4dp"
-                app:srcCompat="@drawable/location" />
+                app:srcCompat="@drawable/image_location" />
 
             <TextView
                 android:id="@+id/tv_location"
@@ -121,7 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:fontFamily="@font/poppins_medium"
+                android:fontFamily="@font/pont_poppins_medium"
                 android:text="전라남도 해남군 해남읍 구교리 590"
                 android:textColor="@color/location_color"
                 android:textSize="8dp" />

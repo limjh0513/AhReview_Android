@@ -39,7 +39,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_extrabold"
+                    android:fontFamily="@font/pont_poppins_extrabold"
                     android:textSize="@dimen/content"
                     android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/pont_poppins_medium"
                     android:textSize="14sp"
                     android:text="에 오신 걸 환영합니다!" />
             </LinearLayout>

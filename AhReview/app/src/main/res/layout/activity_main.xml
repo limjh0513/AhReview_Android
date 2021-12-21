@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:fontFamily="@font/poppins_extrabold"
+                android:fontFamily="@font/pont_poppins_extrabold"
                 android:text="@{vm.userName}"
                 android:textColor="@color/black"
                 android:textSize="@dimen/sub_title" />
@@ -50,7 +50,7 @@
                 android:id="@+id/user_hint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_extrabold"
+                android:fontFamily="@font/pont_poppins_extrabold"
                 android:text="님"
                 android:textColor="@color/black"
                 android:textSize="@dimen/cp_text" />
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/poppins_medium"
+            android:fontFamily="@font/pont_poppins_medium"
             android:text="작성한 리뷰 : "
             android:textColor="@color/review_count"
             android:textSize="@dimen/cp_text"
@@ -103,7 +103,7 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/search_background"
+            android:background="@drawable/background_search"
             android:elevation="30dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -118,7 +118,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="24dp"
-                android:background="@drawable/store_search_background"
+                android:background="@drawable/background_store_search"
                 android:gravity="center"
                 android:onClick="@{() -> vm.onClickFindStoreBtn()}"
                 android:orientation="horizontal"
@@ -130,14 +130,14 @@
                     android:layout_height="15dp"
                     android:layout_gravity="center"
                     android:layout_marginEnd="16dp"
-                    app:srcCompat="@drawable/search_logo" />
+                    app:srcCompat="@drawable/image_search" />
 
                 <TextView
                     android:id="@+id/tv_storeSearch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/poppins_extrabold"
+                    android:fontFamily="@font/pont_poppins_extrabold"
                     android:gravity="center"
                     android:text="가게 찾기"
                     android:textColor="@color/white"

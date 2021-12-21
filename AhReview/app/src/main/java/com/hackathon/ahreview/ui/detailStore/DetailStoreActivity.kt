@@ -44,6 +44,7 @@ class DetailStoreActivity : BaseActivity<ActivityDetailStoreBinding, DetailStore
                 intent.putExtra("address", store.address)
                 intent.putExtra("url", store.url)
 
+                //intent.putExtra("store", store)
                 startActivity(intent)
             })
             backBtn.observe(this@DetailStoreActivity, Observer {
@@ -75,7 +76,8 @@ class DetailStoreActivity : BaseActivity<ActivityDetailStoreBinding, DetailStore
                 getReviewList(1)
 
                 btnInit()
-                mBinding.btnRecent.background = resources.getDrawable(R.drawable.activation_button_background)
+                mBinding.btnRecent.background =
+                    resources.getDrawable(R.drawable.background_activation_button)
                 mBinding.btnRecent.setTextColor(resources.getColor(R.color.white))
 
             })
@@ -83,14 +85,16 @@ class DetailStoreActivity : BaseActivity<ActivityDetailStoreBinding, DetailStore
             positiveBtn.observe(this@DetailStoreActivity, Observer {
                 getReviewList(2)
                 btnInit()
-                mBinding.btnPositive.background = resources.getDrawable(R.drawable.activation_button_background)
+                mBinding.btnPositive.background =
+                    resources.getDrawable(R.drawable.background_activation_button)
                 mBinding.btnPositive.setTextColor(resources.getColor(R.color.white))
             })
 
             negativeBtn.observe(this@DetailStoreActivity, Observer {
                 getReviewList(3)
                 btnInit()
-                mBinding.btnNegative.background = resources.getDrawable(R.drawable.activation_button_background)
+                mBinding.btnNegative.background =
+                    resources.getDrawable(R.drawable.background_activation_button)
                 mBinding.btnNegative.setTextColor(resources.getColor(R.color.white))
             })
         }
@@ -99,10 +103,12 @@ class DetailStoreActivity : BaseActivity<ActivityDetailStoreBinding, DetailStore
     // FIXME: bindingAdapter를 활용해서 처리할 수 있는 코드들이 엄청 많다
     // FIXME: bindingAdapter를 사용할려면 DataBinding에 대한 공부를 해야지만 할 수 있다
 
-    fun btnInit(){
-        mBinding.btnRecent.background = resources.getDrawable(R.drawable.disabled_button_background)
-        mBinding.btnPositive.background = resources.getDrawable(R.drawable.disabled_button_background)
-        mBinding.btnNegative.background = resources.getDrawable(R.drawable.disabled_button_background)
+    fun btnInit() {
+        mBinding.btnRecent.background = resources.getDrawable(R.drawable.background_disabled_button)
+        mBinding.btnPositive.background =
+            resources.getDrawable(R.drawable.background_disabled_button)
+        mBinding.btnNegative.background =
+            resources.getDrawable(R.drawable.background_disabled_button)
 
         mBinding.btnRecent.setTextColor(resources.getColor(R.color.black))
         mBinding.btnPositive.setTextColor(resources.getColor(R.color.black))
@@ -131,10 +137,10 @@ class DetailStoreActivity : BaseActivity<ActivityDetailStoreBinding, DetailStore
         getReviewList(1)
     }
 
-    fun getReviewList(filter: Int){
+    fun getReviewList(filter: Int) {
         val token = SharedPreferenceManager.getToken(this)
 
-        if(token != null){
+        if (token != null) {
             viewModel.getReviewList("Bearer $token", filter, store.address)
         } else {
             shortToast("토큰이 존재하지 않습니다.")

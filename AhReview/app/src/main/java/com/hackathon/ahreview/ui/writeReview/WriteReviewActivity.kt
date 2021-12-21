@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.hackathon.ahreview.R
 import com.hackathon.ahreview.data.model.request.ReviewRequest
+import com.hackathon.ahreview.data.model.response.Store
 import com.hackathon.ahreview.data.util.SharedPreferenceManager
 import com.hackathon.ahreview.databinding.ActivityWriteReviewBinding
 import com.hackathon.ahreview.ui.base.BaseActivity
@@ -55,6 +56,8 @@ class WriteReviewActivity : BaseActivity<ActivityWriteReviewBinding, WriteReview
                 ), PERMISSION
             )
         }
+
+        //val store2 = intent.getSerializableExtra("store") as Store
 
         address = intent.getStringExtra("address")
         mBinding.storeItem.storeTvStoreName.text = intent.getStringExtra("name")

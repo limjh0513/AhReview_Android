@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:fontFamily="@font/poppins_extrabold"
+                android:fontFamily="@font/pont_poppins_extrabold"
                 android:text="가게 찾기"
                 android:textColor="@color/black"
                 android:textSize="@dimen/little_title"

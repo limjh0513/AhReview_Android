@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginEnd="64dp"
-            android:background="@drawable/review_background"
+            android:background="@drawable/background_review"
             android:elevation="8dp">
 
 
@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:fontFamily="@font/poppins_extrabold"
+                    android:fontFamily="@font/pont_poppins_extrabold"
                     android:text="벌서는라이언"
                     android:textColor="@color/black"
                     android:textSize="8dp" />
@@ -110,7 +110,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="@font/poppins_medium"
+                android:fontFamily="@font/pont_poppins_medium"
                 android:text="마트에서 여러가지 샀습니다 직원분이 친절하세요~~"
                 android:textColor="@color/black"
                 android:textSize="@dimen/cp_text"
@@ -155,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="16dp"
-                android:background="@drawable/review_background"
+                android:background="@drawable/background_review"
                 android:elevation="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -188,7 +188,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="@font/poppins_extrabold"
+                    android:fontFamily="@font/pont_poppins_extrabold"
                     android:text="벌서는라이언"
                     android:textColor="@color/black"
                     android:textSize="8dp"
@@ -202,7 +202,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="14dp"
                     android:layout_marginBottom="12dp"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/pont_poppins_medium"
                     android:text="마트에서 여러가지 샀습니다 직원분이 친절하세요~~"
                     android:textColor="@color/black"
                     android:textSize="@dimen/cp_text"
